@@ -1,0 +1,76 @@
+/*
+    Course: COMP.4610 GUI Programming I
+    Name: William Zouzas
+    Email: william_zouzas@student.uml.edu
+    Date Created: 11/27/2021
+
+    File: style.css
+    GUI Assignment: HW5 Implementing a Bit of Scrabble with Drag-and-Drop (with Extra Credits)
+    File Description: This file styles the page for the Scrabble game and modifies the font and other features of the page.
+
+    Copyright (c) 2021 by William. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+    Updated by WZ on 12/16/21
+*/
+
+/* Style body */
+#body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    min-width: 1000px;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 400%;
+    color: crimson;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Game Instructions and Rules */
+#text {
+    margin: auto 200px auto 200px;
+}
+
+/* Board */
+#board {
+    text-align: center;
+}
+
+img {
+    height: 87px;
+    width: 81px;
+}
+
+#tiles {
+    text-align: center;
+}
+
+#current-score {
+    display: inline;
+    color: green;
+    font-weight: bold;
+}
+
+.scores {
+    margin-left: 40%;
+    margin-bottom: 20px;
+}
+
+.box {
+    border: solid 5px;
+    padding: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

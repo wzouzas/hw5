@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<!-- 
+    Course: COMP.4610 GUI Programming I
+    Name: William Zouzas
+    Email: william_zouzas@student.uml.edu
+    Date Created: 11/27/2021
+
+    File: index.html
+    GUI Assignment: HW5 Implementing a Bit of Scrabble with Drag-and-Drop (with Extra Credits)
+    File Description: This HTML file contains the contents of the Scrabble game page. It also gives instructions on how to play for the user.
+
+    Copyright (c) 2021 by William. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+    Updated by WZ on 12/16/21
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+      
+        <!-- Title of Webpage-->
+        <title>Scrabble</title> 
+        
+        <!-- stylesheets--> 
+        <link rel="stylesheet" href="css/style.css"> 
+
+        <!-- Draggable and Droppable Stylesheet: https://jqueryui.com/droppable/ -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+
+        <!-- Draggable and Droppable: https://jqueryui.com/droppable/ -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+    </head>
+    <body id="body">
+        <!-- Page Header -->
+        <h1>Scrabble!</h1>
+        <div id="text">
+            <h2>Scrabble Instructions and Rules</h2>
+            <p>Welcome to Scrabble! Create words using the seven tiles given below. Your total score will be given when you click "Next Word." If you want to restart the game and reset the score, click "Restart."</p>
+            <p>As a rule, you must place letter tiles on the board squares only. If they are placed elsewhere, they will revert back to the tile rack.</p>
+            <p>Also, you must place letter tiles next to each other with no spaces in between. If there is a space between two letters, the letter tile cannot be dropped onto the square.</p>
+            <p>The Double Word Score squares double the total score of the word! If you place a letter on one of these squares, your score will be doubled. If you place a letter square on each, your word score will be quadrupled!</p>
+            <p>The score for each letter is shown on their tile.</p>
+            <p>Have fun playing!</p>
+        </div>
+
+        <!-- Display Word and Score Count -->
+        
+        <div class="box">
+            <div> <!-- Show Word Created by User -->
+                <div class="scores">Word:
+                    <div id="word"></div> 
+                </div>
+            </div>
+            
+            <div> <!-- Current Scrabble Score -->
+                <div class="scores">Score:
+                    <div id="current-score"></div> 
+                </div>
+            </div>
+
+            <div> <!-- Show Highest Score from Current Game -->
+                <div class="scores">Highest Score:
+                    <div id="high-score"></div>
+                </div>
+            </div> 
+        </div>
+        
+    
+        <!-- Scrabble Board -->
+        <div id="board">        
+            <img src="images/Scrabble_BlankSquare_81x87.jpg" id="blank_0">
+            <img src="images/Scrabble_DoubleWordScore_81x87.jpg" id="dw_1">
+            <img src="images/Scrabble_BlankSquare_81x87.jpg" id="blank_2">
+            <img src="images/Scrabble_BlankSquare_81x87.jpg" id="blank_3">
+            <img src="images/Scrabble_BlankSquare_81x87.jpg" id="blank_4">
+            <img src="images/Scrabble_DoubleWordScore_81x87.jpg" id="dw_5">
+            <img src="images/Scrabble_BlankSquare_81x87.jpg" id="blank_6">
+        </div>
+
+        <!-- Tiles -->
+        <div id="tileHolder"></div>
+
+        <div id="tiles"></div>
+
+        <!-- Buttons -->
+        <!-- User can click this button to get a new set of 7 letters -->
+        <div>
+            <button id="nextWord">Next Word</button>
+            <button id="restart">Restart</button>
+        </div>
+          
+        <!-- JavaScript -->
+        <script src="js/scrabble.js"></script>
+    </body>
+</html>
